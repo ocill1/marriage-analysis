@@ -1,14 +1,14 @@
 # 💍 Prediksi Jumlah Pernikahan per Provinsi di Indonesia
 
-Beberapa waktu lalu gua mulai notice sesuatu — iklan KUA mulai muncul di mana-mana. Di Instagram, TikTok, bahkan YouTube. Dan ternyata bukan tanpa alasan: angka pernikahan di Indonesia turun tiap tahun, dari **2 juta lebih di 2018 jadi di bawah 1,5 juta di 2024**. Penurunan hampir 27% dalam 6 tahun.
+Beberapa waktu lalu gue mulai notice sesuatu iklan KUA mulai muncul di mana-mana. Di Instagram, TikTok, bahkan Facebook. Dan ternyata bukan tanpa alasan: angka pernikahan di Indonesia turun tiap tahun, dari **2 juta lebih di 2018 jadi di bawah 1,5 juta di 2024**. Penurunan hampir 27% dalam 6 tahun.
 
-Proyek ini adalah usaha gua buat memahami: **faktor apa yang paling berpengaruh terhadap jumlah pernikahan di suatu provinsi?** Dan bisakah kita memprediksinya?
+Di Project ini gue penegn tau **faktor apa yang paling berpengaruh terhadap jumlah pernikahan di suatu provinsi?** Dan bisakah kita memprediksinya?
 
 ---
 
-## 🔍 Temuan Menarik
+## Temuan Menarik
 
-Ada 4 provinsi yang bikin gua penasaran — IPM-nya tinggi, kemiskinannya rendah, tapi jumlah pernikahannya justru di bawah rata-rata nasional:
+Ada 4 provinsi yang bikin gua penasaran IPM-nya tinggi, kemiskinannya rendah, tapi jumlah pernikahannya justru di bawah rata-rata nasional:
 
 | Provinsi | Jumlah Nikah (2024) | IPM | Kemiskinan (%) |
 |----------|-------------------|-----|----------------|
@@ -17,11 +17,11 @@ Ada 4 provinsi yang bikin gua penasaran — IPM-nya tinggi, kemiskinannya rendah
 | Kep. Bangka Belitung | 7.973 | 73,33 | 4,55 |
 | Kepulauan Riau | 11.533 | 77,97 | 5,37 |
 
-Provinsi-provinsi ini sejahtera secara ekonomi, tapi justru angka pernikahannya rendah. Ini menunjukkan bahwa **kemapanan ekonomi tidak selalu berbanding lurus dengan keinginan menikah** — ada faktor lain seperti gaya hidup, urbanisasi, dan pergeseran nilai sosial yang mungkin berperan.
+Provinsi-provinsi ini sejahtera secara ekonomi, tapi justru angka pernikahannya rendah. Ini menunjukkan bahwa **kemapanan ekonomi tidak selalu berbanding lurus dengan keinginan menikah** ada faktor lain seperti gaya hidup, urbanisasi, dan pergeseran nilai sosial yang mungkin berperan.
 
 ---
 
-## 📉 Tren Nasional
+## Tren Nasional
 
 ```
 2018 → 2.016.171
@@ -33,11 +33,11 @@ Provinsi-provinsi ini sejahtera secara ekonomi, tapi justru angka pernikahannya 
 2024 → 1.478.302
 ```
 
-Penurunan paling drastis terjadi di 2020 (pandemi), tapi yang mengkhawatirkan adalah penurunan **terus berlanjut bahkan setelah pandemi berakhir**.
+Penurunan paling drastis terjadi di 2020 (saat pandemi), **dan terus berlanjut bahkan setelah pandemi berakhir**.
 
 ---
 
-## 🤖 Pendekatan
+## Pendekatan
 
 Proyek ini menggunakan **Supervised Machine Learning (Regression)** untuk memprediksi jumlah pernikahan per provinsi berdasarkan 3 fitur:
 
@@ -49,22 +49,22 @@ Dua model dibandingkan: **Linear Regression** vs **Random Forest Regressor**.
 
 ---
 
-## 📊 Hasil
+## Hasil
 
 | Model | R² Score | RMSE |
 |-------|----------|------|
 | Linear Regression | ~0.65 | ~lebih tinggi |
-| **Random Forest** | **0.7561** ✅ | lebih rendah |
+| **Random Forest** | **0.7561** | lebih rendah |
 
-**Random Forest menang** — artinya hubungan antara kemiskinan, IPM, pengangguran, dan jumlah pernikahan tidak bersifat linear. Ada interaksi kompleks antar variabel yang hanya bisa ditangkap model non-linear.
+**Random Forest menang** artinya hubungan antara kemiskinan, IPM, pengangguran, dan jumlah pernikahan tidak bersifat linear. Ada interaksi kompleks antar variabel yang hanya bisa ditangkap model non-linear.
 
 **Fitur paling berpengaruh: Kemiskinan**
 
-Ini yang paling mengejutkan — ternyata kemiskinan punya pengaruh lebih besar dari IPM maupun pengangguran terhadap jumlah pernikahan. Provinsi dengan kemiskinan tinggi cenderung punya jumlah pernikahan yang lebih bervariasi dan susah diprediksi.
+Ini yang paling mengejutkan ternyata kemiskinan punya pengaruh lebih besar dari IPM maupun pengangguran terhadap jumlah pernikahan. Provinsi dengan kemiskinan tinggi cenderung punya jumlah pernikahan yang lebih bervariasi dan susah diprediksi.
 
 ---
 
-## 🗂️ Struktur Proyek
+## Struktur Proyek
 
 ```
 marriage-analysis/
@@ -110,6 +110,6 @@ jupyter notebook notebooks/marriage_analysis.ipynb
 
 ## 👤 Author
 
-**Mochmad Ilham Nadhif**  
+**Mochamad Ilham Nadhif**  
 Teknik Informatika — Universitas Dian Nuswantoro  
 `A11.2024.15995`
